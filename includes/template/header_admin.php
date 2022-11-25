@@ -6,7 +6,7 @@
 
     // Validar que la sesion sea del administrador
     if( $_SESSION['id_rol'] !== "3" ) {
-        header('Location: /veterinaria-cp/Veterinaria-dinamica/pages/index_sesion.php');
+        header('Location: /Veterinaria-dinamica/pages/index.php');
     }
 
 
@@ -22,6 +22,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <link rel="stylesheet" href="../src/styles/header_admin.css" />
+        <link rel="stylesheet" href="../src/styles/index_admin.css" />
+        <link rel="stylesheet" href="../src/styles/productos_admin.css" />
 
         <script src="../src/js/header.js" defer></script>
         <script src="https://kit.fontawesome.com/4ad7b82c7d.js" crossorigin="anonymous" defer></script>
@@ -53,7 +55,7 @@
                                     <i class="fa-solid fa-house"></i> Home
                                 </a>
                                 <a href="" class="header__nav-link" id="nav-pedidos">
-                                    Empleados
+                                    Operadores
                                 </a>
                                 <a href="" class="header__nav-link" id="nav-pedidos">
                                     Productos

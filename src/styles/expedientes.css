@@ -241,6 +241,7 @@ header {
 
 .header__navegador-central {
     text-align: center;
+    text-decoration: none;
 }
 
 .navegeador-lateral {
@@ -259,7 +260,19 @@ header {
     text-decoration: none;
 }
 
-.header__nav-link:hover {
+.header__nav-link > a {
+    cursor: pointer;
+    color: white;
+    font-size: 1em;
+    font-weight: 400;
+    margin: 5px 20px;
+    display: inline-block;
+    /* Otra forma de colocar elemntos uno al lado del otro */
+    opacity: 80%;
+    text-decoration: none;
+}
+
+.header__nav-link a:hover {
     opacity: 100%;
 }
 
@@ -382,4 +395,114 @@ header {
         background-color: var(--grey-900);
         display: none;
     }
+}
+
+/* -------------------- ---------- EXPEDIENTES ---------- -------------------- */
+
+.buscador__container {
+    width: 50%;
+    margin: 30px auto 0px auto;
+}
+
+.nuevo-expediente__container {
+    width: 95%;
+    margin: 20px auto 10px auto;
+}
+
+.nuevo-expediente__container a {
+    text-decoration: none;
+    background-color: white;
+    color: hsl(120, 100%, 20%);
+    outline: 1px solid hsl(120, 100%, 20%);
+    border: none;
+    font-size: 1rem;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+.nuevo-expediente__container a:hover {
+    text-decoration: none;
+    background-color: hsl(120, 100%, 20%);
+    color: hsl(120, 100%, 95%);
+    outline: transparent;
+    font-size: 1rem;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+
+.lista__expedientes {
+    width: 95%;
+    margin: auto;
+}
+
+.lista__expedientes table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.lista__expedientes thead {
+    border-bottom: 7px solid hsl(211, 12%, 60%);
+}
+
+.lista__expedientes th {
+    background-color: hsl(0, 30%, 25%);
+    border-left: 1px solid #ddd;
+    color: white;
+    text-align: center;
+    padding: 5px 0px;
+}
+
+.lista__expedientes td {
+    font-size: 1rem;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 0px 5px;
+}
+
+.lista__expedientes tbody > tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.lista__expedientes tbody > tr:hover {
+    background-color: #ddd;
+}
+
+.lista__expedientes td a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.lista__expedientes td a:hover {
+    text-decoration: underline;
+}
+
+.table__option {
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+#detalles {
+    color: rgb(222, 162, 49);
+}
+
+#editar {
+    color: rgb(20, 100, 179);
+}
+
+#eliminar {
+    color: rgb(179, 68, 68);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-weight: 600;
+}
+
+#eliminar:hover {
+    text-decoration: underline;
 }
